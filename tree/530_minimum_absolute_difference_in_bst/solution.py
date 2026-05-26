@@ -1,0 +1,19 @@
+"""
+530. Minimum Absolute Difference in BST
+https://leetcode.com/problems/minimum-absolute-difference-in-bst/
+
+Return the minimum absolute difference between values of any two nodes in a BST.
+"""
+
+from typing import Optional
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+class Solution:
+    def getMinimumDifference(self, root: Optional[TreeNode]) -> int:
+        pass

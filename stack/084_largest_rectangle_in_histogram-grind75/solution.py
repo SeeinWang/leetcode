@@ -1,0 +1,25 @@
+"""
+84. Largest Rectangle in Histogram
+https://leetcode.com/problems/largest-rectangle-in-histogram/
+
+Given an array of integers heights representing a histogram's bar heights where width = 1,
+return the area of the largest rectangle in the histogram.
+
+Example 1:
+    Input: heights = [2,1,5,6,2,3]
+    Output: 10
+
+Example 2:
+    Input: heights = [2,4]
+    Output: 4
+
+Constraints:
+    1 <= heights.length <= 10^5
+    0 <= heights[i] <= 10^4
+"""
+
+from typing import List
+
+class Solution:
+    def largestRectangleArea(self, heights: List[int]) -> int:
+        pass

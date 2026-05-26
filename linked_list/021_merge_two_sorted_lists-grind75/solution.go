@@ -1,0 +1,24 @@
+/*
+21. Merge Two Sorted Lists
+https://leetcode.com/problems/merge-two-sorted-lists/
+
+Merge two sorted linked lists and return the head of the merged list.
+
+Example 1:
+    Input: list1 = [1,2,4], list2 = [1,3,4]
+    Output: [1,1,2,3,4,4]
+
+Constraints:
+    The number of nodes in both lists is in the range [0, 50].
+    -100 <= Node.val <= 100
+*/
+
+// Definition for singly-linked list.
+// type ListNode struct {
+//     Val int
+//     Next *ListNode
+// }
+
+func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
+
+}
