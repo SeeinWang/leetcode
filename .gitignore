@@ -3,3 +3,5 @@ node_modules/
 *.log
 .env
 .claude/
+python_synatx/
+python_synatx_learned/
