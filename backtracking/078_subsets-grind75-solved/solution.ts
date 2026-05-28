@@ -14,5 +14,15 @@
  */
 
 function subsets(nums: number[]): number[][] {
-
+    const result: number[][] = []
+    function backTracking(temp: number[], start: number) {
+        result.push([...temp])
+        for (let i = start; i < nums.length; i++) {
+            temp.push(nums[i])
+            backTracking(temp, i + 1)
+            temp.pop()
+        }
+    }
+    backTracking([], 0)
+    return result
 };

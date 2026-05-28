@@ -1,19 +1,20 @@
 /*
- * 46. Permutations
- * https://leetcode.com/problems/permutations/
+ * 47. Permutations II
+ * https://leetcode.com/problems/permutations-ii/
  *
- * Given an array nums of distinct integers, return all the possible permutations.
+ * Given a collection of numbers that may contain duplicates,
+ * return all possible unique permutations in any order.
  *
  * Example:
- *     Input: nums = [1,2,3]
- *     Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+ *     Input: nums = [1,1,2]
+ *     Output: [[1,1,2],[1,2,1],[2,1,1]]
  *
  * Constraints:
- *     1 <= nums.length <= 6
- *     All the integers are unique.
+ *     1 <= nums.length <= 8
+ *     -10 <= nums[i] <= 10
  */
 
-function permute(nums: number[]): number[][] {
+function permuteUnique(nums: number[]): number[][] {
     const res: number[][] = []
     const used: boolean[] = new Array(nums.length).fill(false)
     const path: number[] = []
@@ -23,7 +24,7 @@ function permute(nums: number[]): number[][] {
             res.push([...path])
         } else {
             for (let i = 0; i < nums.length; i++) {
-                if (used[i]) continue
+                if (used[i] || i > 0 && nums[i] === nums[i - 1] && !used[i - 1]) continue;
                 path.push(nums[i])
                 used[i] = true
                 dfs()
@@ -33,6 +34,5 @@ function permute(nums: number[]): number[][] {
         }
     }
     dfs()
-
-    return res;
+    return res
 };

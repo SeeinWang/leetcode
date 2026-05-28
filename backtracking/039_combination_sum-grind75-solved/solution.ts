@@ -16,5 +16,22 @@
  */
 
 function combinationSum(candidates: number[], target: number): number[][] {
+    const res: number[][] = []
+    candidates.sort((a, b) => a - b)
 
+    function dfs(start: number, curSum: number, path: number[]) {
+        if (curSum === target) {
+            res.push([...path])
+        } else {
+            for (let i = start; i < candidates.length; i++) {
+                if (curSum + candidates[i] > target) break
+                path.push(candidates[i])
+                dfs(i, curSum + candidates[i], path)
+                path.pop()
+            }
+        }
+    }
+    dfs(0, 0, [])
+
+    return res;
 };
