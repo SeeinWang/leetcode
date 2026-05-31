@@ -34,7 +34,6 @@ function sortColors(nums: number[]): void {
     while (i <= end) {
         if (nums[i] === 0) {
             [nums[start], nums[i]] = [nums[i], nums[start]];
-            nums[start] = 0;
             i++;
             start++;
         } else if (nums[i] === 1) {

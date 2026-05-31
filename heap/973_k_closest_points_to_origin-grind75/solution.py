@@ -16,3 +16,10 @@ Constraints:
     1 <= k <= points.length <= 10^4
     -10^4 <= xi, yi <= 10^4
 """
+
+from typing import List
+
+
+class Solution:
+    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+        pass

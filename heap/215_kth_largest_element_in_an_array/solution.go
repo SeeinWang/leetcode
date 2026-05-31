@@ -7,3 +7,7 @@ Return the kth largest element.
 Example 1: nums=[3,2,1,5,6,4], k=2 → 5
 Constraints: 1 <= k <= nums.length <= 10^5
 */
+
+func findKthLargest(nums []int, k int) int {
+
+}
