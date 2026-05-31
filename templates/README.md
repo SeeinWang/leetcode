@@ -9,6 +9,8 @@
 | **MinHeap / 优先队列** | [min_heap.ts](min_heap.ts) | `heapq` 内置 | `container/heap` 内置 | Dijkstra, Top K, 调度类 |
 | **Union-Find / DSU** | [union_find.ts](union_find.ts) | [union_find.py](union_find.py) | [union_find.go](union_find.go) | 连通分量, 环检测, 合并集合 |
 | **Trie / 前缀树** | [trie.ts](trie.ts) | [trie.py](trie.py) | [trie.go](trie.go) | 单词搜索, 自动补全, 前缀匹配 |
+| **Monotonic Queue / 单调队列** | [monotonic_queue.ts](monotonic_queue.ts) | [monotonic_queue.py](monotonic_queue.py) | [monotonic_queue.go](monotonic_queue.go) | 定长窗口最值, 前缀和最短区间, DP 优化 |
+| **Monotonic Stack / 单调栈** | [monotonic_stack.ts](monotonic_stack.ts) | [monotonic_stack.py](monotonic_stack.py) | [monotonic_stack.go](monotonic_stack.go) | 下一个更大/更小元素, 柱状图最大矩形, 接雨水 |
 
 ---
 
@@ -51,3 +53,16 @@
 - **单词搜索**：212 Word Search II（Trie + DFS 剪枝）
 - **最长公共前缀**：14（Trie 不是最优但能做）
 - **位运算**：421 Max XOR（二进制 Trie）
+
+### Monotonic Queue
+- **定长窗口最值**：239 Sliding Window Maximum（递减队列，队首即最大值）
+- **前缀和最短区间**：862 Shortest Subarray with Sum at Least K（含负数，递增队列）
+- **DP 优化**：1696 Jump Game VI, 918 Maximum Sum Circular Subarray
+- **信号**：「区间和 ≥ K 求最短」+ 含负数 → 前缀和 + 单调队列
+
+### Monotonic Stack
+- **下一个更大元素**：496 Next Greater Element I（模板题），503（循环数组，跑 2n）
+- **等多少天 / 距离**：739 Daily Temperatures（递减栈存下标，弹出即出答案）
+- **柱状图最大矩形**：84 Largest Rectangle in Histogram（递增栈 + 哨兵 0）
+- **接雨水**：42 Trapping Rain Water（递减栈逐层积水；或双指针 O(1) 空间）
+- **信号**：「对每个元素找右边第一个更大/更小」→ 单调栈；递减栈找更大，递增栈找更小
